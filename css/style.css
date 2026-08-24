@@ -273,7 +273,7 @@ section{padding:120px 0;}
 .final-cta h2{font-size:clamp(2.4rem, 5vw, 3.6rem); max-width:16ch; margin:0 auto 28px;}
 .final-cta p{color:rgba(43,33,27,0.65); max-width:38ch; margin:0 auto 40px; font-size:1.05rem;}
 
-/* -------- responsive -------- */
+/* -------- responsive (shared/section rules only — nav/footer breakpoints live in their own files) -------- */
 @media (max-width: 980px){
   .wrap{padding:0 24px;}
   .hero-grid{grid-template-columns:1fr; gap:70px;}
@@ -284,5 +284,3 @@ section{padding:120px 0;}
   .quote-grid{grid-template-columns:1fr;}
   .stats{gap:32px; flex-wrap:wrap;}
 }
-/* Note: nav and footer are standalone components with their own scoped
-   styles — see partials/nav.html and partials/footer.html */
