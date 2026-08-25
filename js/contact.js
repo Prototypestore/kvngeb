@@ -1,6 +1,10 @@
-const form = document.getElementById('contact-form');
-const messageDiv = document.getElementById('form-message');
+const form = document.querySelector('form[action="#"]');
 const submitBtn = form.querySelector('button[type="submit"]');
+
+const messageDiv = document.createElement('div');
+messageDiv.id = 'form-message';
+messageDiv.setAttribute('aria-live', 'polite');
+form.insertAdjacentElement('afterend', messageDiv);
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -12,11 +16,11 @@ form.addEventListener('submit', async (e) => {
 
   try {
     const formData = {
-      name: form.name.value.trim(),
-      email: form.email.value.trim(),
-      phone: form.phone.value.trim(),
-      service: form.service.value,
-      message: form.message.value.trim()
+      name: form.elements['name'].value.trim(),
+      email: form.elements['email'].value.trim(),
+      phone: form.elements['phone'].value.trim(),
+      service: form.elements['service'].value,
+      message: form.elements['message'].value.trim()
     };
 
     const res = await fetch('/api/contact', {
@@ -65,6 +69,7 @@ form.addEventListener('submit', async (e) => {
 
   } finally {
     submitBtn.disabled = false;
-    submitBtn.innerHTML = 'Send Enquiry <span class="arrow">→</span>';
+    submitBtn.innerHTML =
+      'Send Enquiry <span class="arrow">→</span>';
   }
 });
