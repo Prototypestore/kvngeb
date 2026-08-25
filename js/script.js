@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   revealEls.forEach((el) => observer.observe(el));
 });
 
-```javascript
 /* ==============================================
    MOBILE MENU — OPEN / CLOSE
    ============================================== */
