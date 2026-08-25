@@ -42,6 +42,7 @@ nav.wrap{
   padding:6px;
   cursor:pointer;
   color:var(--ink);
+  margin-left:auto;
 }
 
 .hamburger{
