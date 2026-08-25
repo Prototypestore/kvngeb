@@ -47,6 +47,16 @@ menuBtn?.addEventListener('click', () => {
   }
 });
 
+navLinks.forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && nav.classList.contains('open')) {
+    closeMenu();
+    menuBtn.focus();
+  }
+});
 
 /* ==============================================
    CLOSE MENU ON LINK CLICK
