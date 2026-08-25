@@ -33,7 +33,7 @@ export default async function handler(req, res) {
         },
         body: JSON.stringify({
           from: "All Exclusive Artistry Co. <onboarding@resend.dev>",
-          to: ["YOUR-CLIENT-EMAIL@example.com"],
+          to: ["dikeledireeks@outlook.com"],
           subject: `New Enquiry: ${service}`,
           html: `
             <h2>New Contact Form Enquiry</h2>
