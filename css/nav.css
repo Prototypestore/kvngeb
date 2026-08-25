@@ -1,5 +1,4 @@
-/* Nav — matches classes used in index.html: header, nav.wrap, .logo, .dot, .navlinks, .nav-cta */
-
+/* Nav — matches classes used across all pages: header, nav.wrap, .logo, .dot, .navlinks, .nav-cta */
 header{
   position:sticky; top:0; z-index:50;
   background:rgba(247,242,234,0.92);
@@ -26,6 +25,7 @@ nav.wrap{
   background:var(--clay); transition:width 0.3s ease;
 }
 .navlinks a:hover::after{width:100%;}
+.navlinks a.active::after{width:100%;}
 .nav-cta{
   background:var(--ink); color:var(--cream);
   padding:12px 26px; font-size:0.88rem; letter-spacing:0.03em;
@@ -34,7 +34,6 @@ nav.wrap{
 }
 .nav-cta:hover{background:var(--clay); transform:translateY(-1px);}
 .navtoggle{display:none;}
-
 @media (max-width: 980px){
   .navlinks{display:none;}
 }
